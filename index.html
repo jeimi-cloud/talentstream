@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TalentStream: plataforma para centralizar el reclutamiento y la selección de personal en pymes colombianas y agencias de selección.">
+  <title>TalentStream | Tu proceso de selección, en un solo flujo</title>
+
+  <!-- Ícono de la pestaña -->
+  <link rel="icon" type="image/png" href="img/favicon.png">
+
+  <!-- Fuente Manrope (la misma del logo) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Hoja de estilos -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Barra de progreso de lectura (arriba de todo) -->
+  <div class="progreso" id="progreso"></div>
+
+  <!-- =====================================================
+       MENÚ FIJO
+  ====================================================== -->
+  <header class="menu" id="menu">
+    <div class="contenedor menu__contenido">
+      <a href="#inicio" class="menu__logo">
+        <img src="img/logo-horizontal.png" alt="TalentStream - Reclutamiento y selección">
+      </a>
+
+      <button class="hamburguesa" id="hamburguesa" aria-label="Abrir menú" aria-expanded="false" aria-controls="navegacion">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="menu__nav" id="navegacion" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#planes">Planes</a>
+        <a href="#contacto" class="btn btn--primario btn--pequeno">Solicitar demo</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- =====================================================
+         1. INICIO (portada animada)
+    ====================================================== -->
+    <section class="inicio" id="inicio">
+      <!-- Fondo decorativo animado -->
+      <div class="inicio__fondo" aria-hidden="true">
+        <span class="burbuja b1"></span><span class="burbuja b2"></span><span class="burbuja b3"></span>
+        <div class="cuadricula"></div>
+      </div>
+
+      <div class="contenedor inicio__contenido">
+        <div class="inicio__texto">
+          <span class="etiqueta etiqueta--clara aparecer">● Software para talento humano</span>
+          <h1 class="aparecer">Tu proceso de selección, <span class="degradado">en un solo flujo.</span></h1>
+          <p class="inicio__descripcion aparecer">
+            Recibe, organiza y evalúa candidatos en una sola plataforma.
+            La inteligencia artificial lee las hojas de vida por ti;
+            <strong>las decisiones siguen siendo de tu equipo.</strong>
+          </p>
+          <p class="rotador aparecer" aria-live="polite">
+            Ideal para <span id="rotador-texto">pymes que contratan con frecuencia</span>
+          </p>
+          <div class="inicio__botones aparecer">
+            <a href="#contacto" class="btn btn--blanco" data-plan="Demo">Solicitar demo gratuita →</a>
+            <a href="#demo-ia" class="btn btn--borde-claro">▶ Probar la IA</a>
+          </div>
+        </div>
+
+        <!-- Panel interactivo: se inclina con el mouse -->
+        <div class="escena" id="escena" aria-hidden="true">
+          <div class="panel3d" id="panel3d">
+            <div class="panel3d__barra"><i></i><i></i><i></i><span>Panel de selección</span></div>
+            <div class="panel3d__cuerpo">
+              <div class="panel3d__kpis">
+                <div><small>Vacantes</small><b class="contador" data-hasta="6">0</b></div>
+                <div><small>Candidatos</small><b class="contador" data-hasta="128">0</b></div>
+                <div><small>Entrevistas</small><b class="contador" data-hasta="17">0</b></div>
+              </div>
+              <div class="panel3d__kanban">
+                <div class="col"><small>Recibida</small><p></p><p></p><p class="viajera"></p></div>
+                <div class="col"><small>En revisión</small><p></p><p></p></div>
+                <div class="col"><small>Entrevista</small><p class="ok"></p></div>
+              </div>
+              <div class="panel3d__barras">
+                <span style="--h:70%"></span><span style="--h:55%"></span><span style="--h:85%"></span>
+                <span style="--h:40%"></span><span style="--h:65%"></span><span style="--h:95%"></span><span style="--h:60%"></span>
+              </div>
+            </div>
+          </div>
+          <!-- Tarjetas flotantes -->
+          <div class="flotante f1"><span class="punto punto--verde">✓</span><div><b>Hoja de vida leída</b><small>5 datos extraídos con IA</small></div></div>
+          <div class="flotante f2"><span class="punto punto--azul">◷</span><div><b>Entrevista agendada</b><small>Martes · 10:00 a. m.</small></div></div>
+          <div class="flotante f3"><span class="punto punto--marino">👤</span><div><b>Revisión humana</b><small>La persona decide</small></div></div>
+        </div>
+      </div>
+
+      <a href="#cifras" class="inicio__bajar" aria-label="Bajar">⌄</a>
+    </section>
+
+    <!-- =====================================================
+         CIFRAS (contadores animados)
+    ====================================================== -->
+    <section class="cifras" id="cifras">
+      <div class="contenedor cifras__rejilla">
+        <div class="cifra revelar"><b class="contador" data-hasta="6">0</b><span>módulos en una sola plataforma</span></div>
+        <div class="cifra revelar"><b class="contador" data-hasta="6">0</b><span>etapas con historial de fecha y hora</span></div>
+        <div class="cifra revelar"><b><span class="contador" data-hasta="100">0</span>%</b><span>de las decisiones con revisión humana</span></div>
+        <div class="cifra revelar"><b>24/7</b><span>acceso desde computador o celular</span></div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         2. NOSOTROS (comparador antes / después)
+    ====================================================== -->
+    <section class="seccion" id="nosotros">
+      <div class="contenedor">
+        <header class="seccion__encabezado revelar">
+          <span class="etiqueta">Nosotros</span>
+          <h2>Del caos al orden, en un solo flujo</h2>
+          <p>Somos un emprendimiento colombiano que ayuda a pymes y agencias de selección a dejar atrás
+             las hojas de cálculo, los correos sueltos y los chats dispersos. <strong>Arrastra el control</strong> para ver la diferencia.</p>
+        </header>
+
+        <!-- Comparador: la imagen "después" se recorta según la posición del control -->
+        <div class="comparador revelar" id="comparador">
+          <img src="img/antes.jpg" alt="Antes: información de candidatos dispersa en hojas de cálculo, correos y chats" draggable="false">
+          <div class="comparador__despues" id="comparador-despues">
+            <img src="img/despues.jpg" alt="Después: toda la información ordenada en el panel de TalentStream" draggable="false">
+          </div>
+          <div class="comparador__control" id="comparador-control"><span>◀ ▶</span></div>
+          <input type="range" min="0" max="100" value="50" class="comparador__rango" id="comparador-rango" aria-label="Comparar antes y después">
+        </div>
+
+        <div class="rejilla-3 nosotros__tarjetas">
+          <article class="tarjeta revelar">
+            <div class="tarjeta__icono">!</div>
+            <h3>El problema</h3>
+            <p>La información de los candidatos está repartida entre Excel, correo, carpetas y chats.
+               Se duplican registros, se pierde el historial y es difícil saber en qué va cada vacante.</p>
+          </article>
+          <article class="tarjeta tarjeta--destacada revelar">
+            <div class="tarjeta__icono">★</div>
+            <h3>Nuestra propuesta de valor</h3>
+            <p>Centralizamos todo el reclutamiento y la selección en un solo lugar, reducimos la digitación
+               manual con IA y dejamos trazabilidad completa de cada aspirante.</p>
+          </article>
+          <article class="tarjeta revelar">
+            <div class="tarjeta__icono">◆</div>
+            <h3>Lo que nos diferencia</h3>
+            <ul class="lista-check">
+              <li>La IA sugiere, <strong>la persona decide</strong>.</li>
+              <li>Solo reclutamiento y selección: simple de usar.</li>
+              <li>Indicadores de tiempo desde el primer día.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         3. SERVICIOS (pestañas con imagen)
+    ====================================================== -->
+    <section class="seccion seccion--gris" id="servicios">
+      <div class="contenedor">
+        <header class="seccion__encabezado revelar">
+          <span class="etiqueta">Servicios</span>
+          <h2>Seis módulos, un solo proceso</h2>
+          <p>Elige un servicio para ver cómo funciona.</p>
+        </header>
+
+        <div class="servicios revelar">
+          <!-- Lista de servicios (pestañas) -->
+          <div class="servicios__lista" role="tablist" aria-label="Servicios">
+            <button class="servicio activo" role="tab" aria-selected="true" data-img="img/servicio-recepcion.jpg" data-alt="Hojas de vida llegando a la bandeja de una vacante">
+              <span class="servicio__icono">📥</span>
+              <span><b>Recepción centralizada</b><small>Todas las hojas de vida en un solo lugar, asociadas a su vacante.</small></span>
+            </button>
+            <button class="servicio" role="tab" aria-selected="false" data-img="img/servicio-lectura.jpg" data-alt="La IA extrae los datos de una hoja de vida">
+              <span class="servicio__icono">🤖</span>
+              <span><b>Lectura de hojas de vida con IA</b><small>Extrae correo, teléfono, formación, experiencia y habilidades.</small></span>
+            </button>
+            <button class="servicio" role="tab" aria-selected="false" data-img="img/servicio-validacion.jpg" data-alt="Lista de requisitos validados del candidato">
+              <span class="servicio__icono">✅</span>
+              <span><b>Validación de requisitos</b><small>Compara cada perfil con el cargo y muestra qué cumple.</small></span>
+            </button>
+            <button class="servicio" role="tab" aria-selected="false" data-img="img/servicio-etapas.jpg" data-alt="Tablero de candidatos por etapas">
+              <span class="servicio__icono">📋</span>
+              <span><b>Seguimiento por etapas</b><small>Tablero visual con historial de fecha y hora.</small></span>
+            </button>
+            <button class="servicio" role="tab" aria-selected="false" data-img="img/servicio-entrevistas.jpg" data-alt="Entrevista virtual con un candidato">
+              <span class="servicio__icono">📅</span>
+              <span><b>Agenda de entrevistas</b><small>Virtuales o presenciales, con su resultado registrado.</small></span>
+            </button>
+            <button class="servicio" role="tab" aria-selected="false" data-img="img/servicio-indicadores.jpg" data-alt="Panel de indicadores con gráficos">
+              <span class="servicio__icono">📊</span>
+              <span><b>Panel de indicadores</b><small>Tiempos, candidatos activos y vacantes abiertas.</small></span>
+            </button>
+          </div>
+
+          <!-- Imagen del servicio seleccionado -->
+          <figure class="servicios__visor">
+            <img id="servicio-img" src="img/servicio-recepcion.jpg" alt="Hojas de vida llegando a la bandeja de una vacante">
+            <div class="servicios__barra"><span id="servicio-progreso"></span></div>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         DEMO INTERACTIVA DE LA IA
+    ====================================================== -->
+    <section class="seccion demo" id="demo-ia">
+      <div class="contenedor">
+        <header class="seccion__encabezado revelar">
+          <span class="etiqueta etiqueta--clara">Pruébalo tú mismo</span>
+          <h2>Mira cómo la IA lee una hoja de vida</h2>
+          <p>Edita el texto o usa el ejemplo y pulsa <strong>Analizar</strong>. Es una demostración: todo ocurre en tu navegador.</p>
+        </header>
+
+        <div class="demo__rejilla revelar">
+          <div class="demo__entrada">
+            <div class="demo__cabecera"><span>📄 hoja_de_vida.txt</span><button type="button" id="demo-ejemplo" class="enlace">Otro ejemplo ↻</button></div>
+            <div class="demo__texto-envoltura">
+              <textarea id="demo-texto" rows="11" aria-label="Texto de la hoja de vida"></textarea>
+              <div class="demo__escaner" id="demo-escaner"></div>
+            </div>
+            <button type="button" class="btn btn--blanco btn--bloque" id="demo-analizar">✨ Analizar con IA</button>
+          </div>
+
+          <div class="demo__salida">
+            <div class="demo__cabecera"><span>Datos extraídos</span><span class="pildora" id="demo-estado">Esperando…</span></div>
+            <ul class="demo__datos" id="demo-datos">
+              <li data-campo="nombre"><small>Nombre</small><b>—</b></li>
+              <li data-campo="correo"><small>Correo</small><b>—</b></li>
+              <li data-campo="telefono"><small>Teléfono</small><b>—</b></li>
+              <li data-campo="formacion"><small>Formación</small><b>—</b></li>
+              <li data-campo="experiencia"><small>Experiencia</small><b>—</b></li>
+              <li data-campo="habilidades"><small>Habilidades</small><b>—</b></li>
+            </ul>
+            <p class="demo__nota">👤 Antes de usar estos datos, una persona del equipo los revisa y confirma.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         4. CÓMO FUNCIONA (pasos interactivos) + GALERÍA
+    ====================================================== -->
+    <section class="seccion" id="como-funciona">
+      <div class="contenedor">
+        <header class="seccion__encabezado revelar">
+          <span class="etiqueta">Cómo funciona</span>
+          <h2>Cuatro pasos, un solo flujo</h2>
+          <p>Haz clic en cada paso.</p>
+        </header>
+
+        <div class="pasos revelar">
+          <div class="pasos__linea"><span id="pasos-avance"></span></div>
+          <button class="paso activo" data-paso="0"><span>1</span><b>Recibe</b><small>La hoja de vida llega a la vacante.</small></button>
+          <button class="paso" data-paso="1"><span>2</span><b>Organiza</b><small>La IA extrae datos y tu equipo los confirma.</small></button>
+          <button class="paso" data-paso="2"><span>3</span><b>Evalúa</b><small>Se validan requisitos y se avanza por etapas.</small></button>
+          <button class="paso" data-paso="3"><span>4</span><b>Decide</b><small>Entrevistas e indicadores para elegir.</small></button>
+        </div>
+
+        <div class="paso__detalle revelar">
+          <img id="paso-img" src="img/servicio-recepcion.jpg" alt="Recepción de hojas de vida">
+          <div>
+            <span class="etiqueta" id="paso-num">Paso 1</span>
+            <h3 id="paso-titulo">Recibe todas las candidaturas</h3>
+            <p id="paso-texto">Cada hoja de vida queda registrada en su vacante, sin correos perdidos ni archivos duplicados.</p>
+          </div>
+        </div>
+
+        <!-- Galería en carrusel -->
+        <div class="galeria revelar">
+          <div class="galeria__encabezado">
+            <div>
+              <h3>Galería</h3>
+              <p>Ilustraciones creadas con inteligencia artificial. Haz clic para ampliar.</p>
+            </div>
+            <div class="galeria__flechas">
+              <button type="button" id="galeria-prev" aria-label="Anterior">←</button>
+              <button type="button" id="galeria-next" aria-label="Siguiente">→</button>
+            </div>
+          </div>
+          <div class="carrusel" id="carrusel">
+            <div class="carrusel__pista" id="carrusel-pista">
+              <figure><img src="img/antes.jpg" alt="Antes: información dispersa"><figcaption>Antes: información dispersa</figcaption></figure>
+              <figure><img src="img/despues.jpg" alt="Después: todo en TalentStream"><figcaption>Después: todo en TalentStream</figcaption></figure>
+              <figure><img src="img/servicio-recepcion.jpg" alt="Recepción de hojas de vida"><figcaption>Recepción de hojas de vida</figcaption></figure>
+              <figure><img src="img/servicio-lectura.jpg" alt="Lectura con IA"><figcaption>Lectura con IA</figcaption></figure>
+              <figure><img src="img/servicio-validacion.jpg" alt="Validación de requisitos"><figcaption>Validación de requisitos</figcaption></figure>
+              <figure><img src="img/servicio-etapas.jpg" alt="Seguimiento por etapas"><figcaption>Seguimiento por etapas</figcaption></figure>
+              <figure><img src="img/servicio-entrevistas.jpg" alt="Entrevistas"><figcaption>Entrevistas</figcaption></figure>
+              <figure><img src="img/servicio-indicadores.jpg" alt="Panel de indicadores"><figcaption>Panel de indicadores</figcaption></figure>
+            </div>
+          </div>
+          <div class="carrusel__puntos" id="carrusel-puntos"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         CALCULADORA DE AHORRO
+    ====================================================== -->
+    <section class="seccion seccion--gris" id="calculadora">
+      <div class="contenedor calculadora">
+        <div class="calculadora__texto revelar">
+          <span class="etiqueta">Calculadora</span>
+          <h2>¿Cuánto tiempo podrías ahorrar?</h2>
+          <p>Mueve los controles con los datos de tu empresa. Es una <strong>estimación ilustrativa</strong>:
+             el porcentaje de ahorro es un supuesto que puedes cambiar.</p>
+
+          <label class="control">
+            <span>Hojas de vida al mes <b id="v-hojas">80</b></span>
+            <input type="range" id="c-hojas" min="10" max="500" step="10" value="80">
+          </label>
+          <label class="control">
+            <span>Minutos de revisión manual por hoja de vida <b id="v-minutos">12</b></span>
+            <input type="range" id="c-minutos" min="3" max="40" step="1" value="12">
+          </label>
+          <label class="control">
+            <span>Ahorro supuesto con automatización <b id="v-ahorro">40 %</b></span>
+            <input type="range" id="c-ahorro" min="10" max="70" step="5" value="40">
+          </label>
+        </div>
+
+        <div class="calculadora__resultado revelar">
+          <p class="calculadora__etiqueta">Tiempo que podrías liberar al mes</p>
+          <p class="calculadora__grande"><span id="r-horas">6,4</span> <small>horas</small></p>
+          <p class="calculadora__sub">≈ <b id="r-dias">0,8</b> días laborales de 8 horas</p>
+          <div class="barras-comparacion">
+            <div><span>Proceso manual</span><div class="barra"><i id="b-antes" style="width:100%"></i></div><b id="r-antes">16 h</b></div>
+            <div><span>Con TalentStream</span><div class="barra barra--azul"><i id="b-despues" style="width:60%"></i></div><b id="r-despues">9,6 h</b></div>
+          </div>
+          <a href="#contacto" class="btn btn--blanco btn--bloque">Quiero ahorrar ese tiempo →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         5. PLANES
+    ====================================================== -->
+    <section class="seccion" id="planes">
+      <div class="contenedor">
+        <header class="seccion__encabezado revelar">
+          <span class="etiqueta">Planes</span>
+          <h2>Un plan para cada tamaño de equipo</h2>
+          <p>Precios en pesos colombianos. Cambia a pago anual y ahorra un 15 %.</p>
+        </header>
+
+        <div class="selector-pago revelar" role="group" aria-label="Tipo de pago">
+          <button type="button" class="activo" data-pago="mensual">Mensual</button>
+          <button type="button" data-pago="anual">Anual <small>-15 %</small></button>
+        </div>
+
+        <div class="rejilla-3 planes">
+          <article class="plan revelar">
+            <h3>Básico</h3>
+            <p class="plan__para">Para emprendimientos y negocios pequeños</p>
+            <p class="plan__precio"><span data-precio="89000">$89.000</span><small>/mes</small></p>
+            <ul class="lista-check">
+              <li>1 vacante activa</li>
+              <li>Hasta 50 candidatos por mes</li>
+              <li>Lectura de hojas de vida con IA</li>
+              <li>Tablero de etapas</li>
+            </ul>
+            <a href="#contacto" class="btn btn--secundario btn--bloque" data-plan="Básico">Elegir Básico</a>
+          </article>
+
+          <article class="plan plan--destacado revelar">
+            <span class="plan__insignia">Más elegido</span>
+            <h3>Pro</h3>
+            <p class="plan__para">Para pymes que contratan con frecuencia</p>
+            <p class="plan__precio"><span data-precio="249000">$249.000</span><small>/mes</small></p>
+            <ul class="lista-check">
+              <li>Hasta 10 vacantes activas</li>
+              <li>Candidatos ilimitados</li>
+              <li>Validación automática de requisitos</li>
+              <li>Agenda de entrevistas</li>
+              <li>Panel de indicadores</li>
+            </ul>
+            <a href="#contacto" class="btn btn--primario btn--bloque" data-plan="Pro">Elegir Pro</a>
+          </article>
+
+          <article class="plan revelar">
+            <h3>Empresa</h3>
+            <p class="plan__para">Para agencias de selección y grandes equipos</p>
+            <p class="plan__precio"><span>A la medida</span></p>
+            <ul class="lista-check">
+              <li>Vacantes ilimitadas</li>
+              <li>Varios usuarios y permisos</li>
+              <li>Exportación de datos e informes</li>
+              <li>Acompañamiento personalizado</li>
+            </ul>
+            <a href="#contacto" class="btn btn--secundario btn--bloque" data-plan="Empresa">Hablar con ventas</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         PREGUNTAS FRECUENTES (acordeón)
+    ====================================================== -->
+    <section class="seccion seccion--gris" id="preguntas">
+      <div class="contenedor preguntas">
+        <header class="seccion__encabezado revelar">
+          <span class="etiqueta">Preguntas frecuentes</span>
+          <h2>Resolvemos tus dudas</h2>
+        </header>
+
+        <div class="acordeon revelar">
+          <details open>
+            <summary>¿La inteligencia artificial decide a quién contratar?</summary>
+            <p>No. La IA solo lee las hojas de vida y sugiere datos. Una persona de tu equipo revisa, corrige y toma todas las decisiones.</p>
+          </details>
+          <details>
+            <summary>¿Necesito instalar algo?</summary>
+            <p>No. TalentStream funciona en el navegador, desde el computador o el celular.</p>
+          </details>
+          <details>
+            <summary>¿Cómo se protegen los datos de los candidatos?</summary>
+            <p>Solo se piden los datos necesarios para el proceso, el acceso es por usuario y las exportaciones para análisis van anonimizadas, según la Ley 1581 de 2012.</p>
+          </details>
+          <details>
+            <summary>¿Puedo cambiar de plan después?</summary>
+            <p>Sí. Puedes subir o bajar de plan cuando lo necesites según el número de vacantes.</p>
+          </details>
+          <details>
+            <summary>¿Cuánto dura la demo?</summary>
+            <p>Unos 30 minutos por videollamada. Te mostramos el flujo completo con una vacante de ejemplo.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         6. CONTACTO
+    ====================================================== -->
+    <section class="seccion contacto-seccion" id="contacto">
+      <div class="contenedor contacto">
+        <div class="contacto__info revelar">
+          <span class="etiqueta etiqueta--clara">Contacto</span>
+          <h2>Agenda una demo gratuita</h2>
+          <p>Cuéntanos sobre tu empresa y te mostramos cómo TalentStream puede ordenar tu proceso de selección.</p>
+          <ul class="contacto__datos">
+            <li><span>✉</span> contacto@talentstream.co</li>
+            <li><span>☎</span> +57 300 000 0000</li>
+            <li><span>⌖</span> Bogotá D. C., Colombia</li>
+            <li><span>◷</span> Lunes a viernes, 8:00 a. m. – 5:00 p. m.</li>
+          </ul>
+        </div>
+
+        <!-- Formulario validado con JavaScript -->
+        <form class="formulario revelar" id="formulario" novalidate>
+          <div class="campo">
+            <label for="nombre">Nombre completo *</label>
+            <input type="text" id="nombre" name="nombre" autocomplete="name">
+            <small class="error" aria-live="polite"></small>
+          </div>
+          <div class="fila-2">
+            <div class="campo">
+              <label for="correo">Correo electrónico *</label>
+              <input type="email" id="correo" name="correo" autocomplete="email">
+              <small class="error" aria-live="polite"></small>
+            </div>
+            <div class="campo">
+              <label for="telefono">Teléfono</label>
+              <input type="tel" id="telefono" name="telefono" autocomplete="tel" placeholder="Ej.: 300 123 4567">
+              <small class="error" aria-live="polite"></small>
+            </div>
+          </div>
+          <div class="fila-2">
+            <div class="campo">
+              <label for="empresa">Empresa *</label>
+              <input type="text" id="empresa" name="empresa" autocomplete="organization">
+              <small class="error" aria-live="polite"></small>
+            </div>
+            <div class="campo">
+              <label for="plan">Plan de interés</label>
+              <select id="plan" name="plan">
+                <option>Demo</option>
+                <option>Básico</option>
+                <option>Pro</option>
+                <option>Empresa</option>
+              </select>
+            </div>
+          </div>
+          <div class="campo">
+            <label for="mensaje">Mensaje *</label>
+            <textarea id="mensaje" name="mensaje" rows="4" placeholder="¿Cuántas vacantes manejas al mes? ¿Qué te gustaría mejorar?"></textarea>
+            <small class="error" aria-live="polite"></small>
+          </div>
+          <div class="campo campo--check">
+            <label><input type="checkbox" id="acepto" name="acepto">
+              Autorizo el tratamiento de mis datos personales (Ley 1581 de 2012). *</label>
+            <small class="error" aria-live="polite"></small>
+          </div>
+          <button type="submit" class="btn btn--primario btn--bloque" id="btn-enviar">Enviar solicitud</button>
+          <p class="formulario__exito" id="exito" hidden></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- =====================================================
+       PIE DE PÁGINA
+  ====================================================== -->
+  <footer class="pie">
+    <div class="contenedor pie__contenido">
+      <div>
+        <img src="img/logo-blanco.png" alt="TalentStream" class="pie__logo">
+        <p>La inteligencia artificial apoya; las decisiones de selección las toman personas.</p>
+      </div>
+      <nav aria-label="Enlaces del pie">
+        <a href="#nosotros">Nosotros</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#planes">Planes</a>
+        <a href="#preguntas">Preguntas</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+    <div class="contenedor pie__legal">
+      <p>© <span id="anio">2026</span> TalentStream · Proyecto final Electiva Herramientas de IA · UNICAFAM</p>
+      <p>Desarrollado por: Integrante 1 · Integrante 2</p>
+    </div>
+  </footer>
+
+  <!-- Botón volver arriba -->
+  <a href="#inicio" class="arriba" id="arriba" aria-label="Volver arriba">↑</a>
+
+  <!-- Visor de imágenes ampliadas -->
+  <div class="visor" id="visor" hidden>
+    <button class="visor__cerrar" id="visor-cerrar" aria-label="Cerrar">×</button>
+    <button class="visor__flecha visor__flecha--izq" id="visor-prev" aria-label="Anterior">‹</button>
+    <figure>
+      <img id="visor-img" src="" alt="">
+      <figcaption id="visor-texto"></figcaption>
+    </figure>
+    <button class="visor__flecha visor__flecha--der" id="visor-next" aria-label="Siguiente">›</button>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
