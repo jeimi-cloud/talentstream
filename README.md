@@ -4,7 +4,7 @@
 
 TalentStream es un emprendimiento que ofrece una plataforma de software para centralizar el reclutamiento y la selección de personal, dirigida a pymes colombianas y agencias de selección. La inteligencia artificial apoya la lectura de hojas de vida; las decisiones las toman personas.
 
-🔗 **Página publicada:** https://USUARIO.github.io/talentstream/
+🔗 **Página publicada:** https://jeimi-cloud.github.io/talentstream/
 
 ---
 
